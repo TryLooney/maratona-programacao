@@ -1,4 +1,5 @@
 import sys
+import time
 
 """
 5 3
@@ -22,7 +23,6 @@ for i in range(int(command[1])):
     valorespercorrer = notes[de:para+1]
     maisrepete = None
     for j in valorespercorrer:
-        print(j)
         if maisrepete == None:
             maisrepete = j
         if valorespercorrer.count(j) > valorespercorrer.count(maisrepete):
@@ -32,6 +32,5 @@ for i in range(int(command[1])):
     for k in indexespercorrer:
         notes[k] = (notes[k] + maisrepete)%9
 
-print(notes)
-# for i in range(0, len(notes)):
-#     print(notes[i])
+for i in range(0, len(notes)):
+    print(notes[i])
